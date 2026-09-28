@@ -86,6 +86,7 @@ footer{padding:64px 0 48px;color:var(--mut);font-size:14px}
 </style>
 </head>
 <body>
+<noscript><div><img src="https://mc.yandex.ru/watch/113121463" style="position:absolute;left:-9999px" alt=""></div></noscript>
 <nav><div class="w"><b>НЖ</b><a href="#exp">Опыт</a><a href="#stack">Стек</a><a href="#edu">Образование</a><a href="#courses">Курсы</a><a href="#contact">Контакты</a><button id="tg" aria-label="Сменить тему">Тема</button></div></nav>
 
 <main class="w">
@@ -162,13 +163,11 @@ footer{padding:64px 0 48px;color:var(--mut);font-size:14px}
 <footer class="w">Никита Жизневский · Москва · Английский B1</footer>
 
 <script>
-// Скрытый счётчик переходов по utm_source: на странице ничего не показывает
-(function(){try{
-const NS="nz-resume-k7q2x9";
-const src=(new URLSearchParams(location.search).get("utm_source")||"direct").toLowerCase().replace(/[^a-z0-9_-]/g,"").slice(0,30)||"direct";
-if(sessionStorage.getItem("cnt"))return;sessionStorage.setItem("cnt","1");
-new Image().src="https://api.counterapi.dev/v1/"+NS+"/"+src+"/up";
-}catch(e){}})();
+// Яндекс Метрика: впишите номер счётчика вместо 0, чтобы включить
+const YM_ID=113121463;
+if(YM_ID){(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();k=e.createElement(t);a=e.getElementsByTagName(t)[0];k.async=1;k.src=r;a.parentNode.insertBefore(k,a)})(window,document,"script","https://mc.yandex.ru/metrika/tag.js?id=113121463","ym");
+ym(YM_ID,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true});
+document.addEventListener("click",e=>{const a=e.target.closest('a[href*="t.me"],a[href^="mailto:"]');if(a)ym(YM_ID,"reachGoal",a.href.includes("t.me")?"telegram_click":"email_click")})}
 const jobs=[
 {c:"Т-Банк",r:"Java/Kotlin Software Developer Engineer",d:"сен 2025 — сейчас · 1 год 1 мес",o:1,n:"Индустрия: IT, системная интеграция, финансовый сектор (банк). Активно использую встроенные AI-агенты и MCP-серверы в IDE (Nestor, A2A-совместимые агенты): ускоряю написание кода, генерацию тестов, рефакторинг и код-ревью.",p:[
  {t:"LaunchHub",s:"Сервис обработки заявок корпоративных клиентов. Команда: 4 бэкенд-разработчика, 5 фронтенд, 2 системных аналитика, 2 QA, тимлид.",k:"Spring Boot 4.0.6,Kotlin 2.3.10,Hibernate 7.3,PostgreSQL,Kafka,Docker,Kubernetes,Gradle 9.3",a:[
